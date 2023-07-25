@@ -29,12 +29,7 @@ jobs:
           pip install -r requirements.txt
       - name: Run Tests
         run: |
+          cd k_app
+          cd management
           python manage.py test
-      - name: Push main into another branch
-        uses: codingforentrepreneurs/action-branch-to-branch@main
-        with: 
-          dest_branch: production-3
-          source_branch: main
-          commit_message: 'This is a message'
-        env: 
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+

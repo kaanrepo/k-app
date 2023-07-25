@@ -30,6 +30,5 @@ jobs:
       - name: Run Tests
         run: |
           cd k_app
-          cd management
           python manage.py test
 
